@@ -25,7 +25,7 @@ jobs:
         uses: actions/checkout@v3        # Options: actions/checkout@v3 | actions/setup-node@v3 | docker/setup-buildx-action@v2
         # Hint: Checkout is needed so that semgrep can access your repo code
 
-      - name: Run semgrep analysis       # Options: choose any name you want. This step scans our code. 
+      - name: Run semgrep analysis (blocking mode)      # Options: choose any name you want. This step scans our code. 
         run: semgrep scan --sarif --sarif-output=semgrep.sarif --error       # Options: 
                                      # semgrep scan --sarif --sarif-output=semgrep.sarif --error  (blocking)
                                      # semgrep scan --sarif --sarif-output=semgrep.sarif || true  (non-blocking)
